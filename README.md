@@ -1,5 +1,7 @@
-# qrcode-generator
-Gerando QRCode com Python
+# qr-code-generator
+Generating QR Code with Python
 
-
-Para rodar basta fazer um Git Clone e em seguida rodar "pip install -r requirements.txt"
+To run it, just do a Git Clone and then run:
+```bash
+pip install -r requirements.txt
+```
