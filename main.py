@@ -2,11 +2,16 @@ import pyqrcode
 import png
 from pyqrcode import QRCode
 
-# Link desejado para o QRCode #
-QRString = 'https://www.instagram.com/tech.gus/'
+qrcode_path = './qrcodes'
 
-# Monta o QRCode #
-url = pyqrcode.create(QRString)
+# Link you wanna generate the qr code
+qr_string = input('Insert link to generate the QR Code: ')
 
-# Salva o QRCode gerado no local desejado #
-url.png(r'qr.png', scale=8)
+url = pyqrcode.create(qr_string)
+
+# Makes the user choose a name for the file
+qrcode_name = input('Insert the file name: ')
+qrcode_save = f'{qrcode_path}/{qrcode_name}.png'
+
+# Save the generated QR Code in the chosen path
+url.png(qrcode_save, scale=8)
